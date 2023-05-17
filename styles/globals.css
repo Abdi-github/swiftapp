@@ -2,26 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;300;700;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color-bg: #1f1f38;
+    --color-bg-variant: #2c2c6c;
+    --color-bg-opacity: #1f1f3890;
+    --color-primary: #4db5ff;
+    --color-primary-variant: #4db5ff66;
+    --color-white: #fff;
+    --color-light: #ffffff99;
+    --transition: all 400ms ease;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  body {
+    @apply bg-bg_image bg-backGround text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-roboto;
+  }
+  h5,
+  h6,
+  p,
+  span,
+  buttton {
+    @apply font-openSans;
+  }
 }

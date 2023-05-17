@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Ecommerce",
+        "type": [
+            "React",
+            "Mongo DB",
+            "Node",
+            "express"
+        ],
+        "description": "A web application built using React and Node.js.",
+        "githubLink": "https://github.com/project1",
+        "webLink": "https://www.project1.com",
+        "photo": "https://www.example.com/project1.jpg"
+    },
+    {
+        "name": "Ecommerce",
+        "type": [
+            "React",
+            "Mongo DB",
+            "Node",
+            "express"
+        ],
+        "description": "A web application built using React and Node.js.",
+        "githubLink": "https://github.com/project1",
+        "webLink": "https://www.project1.com",
+        "photo": "https://www.example.com/project1.jpg"
+    },
+    {
+        "name": "Ecommerce",
+        "type": [
+            "React",
+            "Mongo DB",
+            "Node",
+            "express"
+        ],
+        "description": "A web application built using React and Node.js.",
+        "githubLink": "https://github.com/project1",
+        "webLink": "https://www.project1.com",
+        "photo": "https://www.example.com/project1.jpg"
+    },
+    {
+        "name": "Ecommerce",
+        "type": [
+            "React",
+            "Mongo DB",
+            "Node",
+            "express"
+        ],
+        "description": "A web application built using React and Node.js.",
+        "githubLink": "https://github.com/project1",
+        "webLink": "https://www.project1.com",
+        "photo": "https://www.example.com/project1.jpg"
+    },
+    {
+        "name": "Blog",
+        "type": [
+            "React",
+            "mysql",
+            "Laravel",
+            "express"
+        ],
+        "description": "A web application built using React and Node.js.",
+        "githubLink": "https://github.com/project1",
+        "webLink": "https://www.project1.com",
+        "photo": "https://www.example.com/project1.jpg"
+    },
+    {
+        "name": "Hotel",
+        "type": [
+            "nextjs",
+            "mysql",
+            "symfony"
+        ],
+        "description": "A mobile app developed using Flutter framework.",
+        "githubLink": "https://github.com/project2",
+        "webLink": "https://www.project2.com",
+        "photo": "https://www.example.com/project2.jpg"
+    },
+    {
+        "name": "Some",
+        "type": [
+            "angular",
+            "tailwind",
+            "mysql",
+            "symfony"
+        ],
+        "description": "A data analysis project using Python and pandas library.",
+        "githubLink": "https://github.com/project3",
+        "webLink": "https://www.project3.com",
+        "photo": "https://www.example.com/project3.jpg"
+    }
+]

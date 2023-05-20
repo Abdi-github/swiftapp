@@ -41,7 +41,7 @@ const Footer = () => {
           href="#contact"
           className="text-primary font-semibold transition-custom hover:text-light"
         >
-          Contacts
+          Contact
         </Link>
       </div>
       <div className="flex justify-center space-x-5">

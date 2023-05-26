@@ -10,32 +10,26 @@ import FixedNav from '@/components/fixedNav/FixedNav';
 
 export default function Home(props) {
   const { t } = useTranslation();
-  if (process.env.NEXT_PUBLIC_MODE === 'construction') {
-    return (
-      <>
-        <div className="container tablet:max-w-lg laptop:max-w-2xl py-36">
-          <h1 className="text-center text-2xl font-semibold mb-2">
-            Website under construction
-          </h1>
-          <p className="text-center text-light font-light">
-            Abdulkadir Ahmed Hussien
-          </p>
-        </div>
-      </>
-    );
-  } else {
-    return (
-      <>
-        <Header />
-        <FixedNav />
-        <Intro />
-        <Skills />
-        <Works />
-        <ContactMe />
-        <Footer />
-      </>
-    );
-  }
+
+  return (
+    <>
+      <div className="container tablet:max-w-lg laptop:max-w-2xl py-36">
+        <h1 className="text-center text-2xl font-semibold mb-2">
+          Website under construction
+        </h1>
+        <p className="text-center text-light font-light">
+          Abdulkadir Ahmed Hussien
+        </p>
+      </div>
+      {/* <Header />
+      <FixedNav />
+      <Intro />
+      <Skills />
+      <Works />
+      <ContactMe />
+      <Footer /> */}
+    </>
+  );
 }
 
 export async function getStaticProps({ locale }) {

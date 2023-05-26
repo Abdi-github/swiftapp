@@ -10,7 +10,7 @@
         "description": "A web application built using React and Node.js.",
         "githubLink": "https://github.com/project1",
         "webLink": "https://www.project1.com",
-        "photo": "https://www.example.com/project1.jpg"
+        "photo": "/assets/nflix.jpg"
     },
     {
         "name": "Ecommerce",

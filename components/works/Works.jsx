@@ -64,7 +64,7 @@ const Works = () => {
           >
             <div className="relative h-44 group">
               <Image
-                src="/assets/me.jpg"
+                src="/assets/nflix.jpg"
                 fill
                 className="object-cover rounded-3xl "
                 alt="project"

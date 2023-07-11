@@ -17,9 +17,7 @@ export default function Home(props) {
         <h1 className="text-center text-2xl font-semibold mb-2">
           Website under construction
         </h1>
-        <p className="text-center text-light underline">
-          Abdulkadir Ahmed Hussien
-        </p>
+        <p className="text-center text-light underline">Abdulkadir Ahmed</p>
       </div>
       {/* <Header />
       <FixedNav />

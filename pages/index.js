@@ -13,19 +13,19 @@ export default function Home(props) {
 
   return (
     <>
-      <div className="container tablet:max-w-lg laptop:max-w-2xl py-36">
+      {/* <div className="container tablet:max-w-lg laptop:max-w-2xl py-36">
         <h1 className="text-center text-2xl font-semibold mb-2">
           Website under construction
         </h1>
         <p className="text-center text-light underline">Abdulkadir Ahmed</p>
-      </div>
-      {/* <Header />
+      </div> */}
+      <Header />
       <FixedNav />
       <Intro />
       <Skills />
       <Works />
       <ContactMe />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

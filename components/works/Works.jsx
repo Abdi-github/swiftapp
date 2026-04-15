@@ -1,7 +1,26 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import data from '../../data/projects';
+import {
+  SiReact, SiVuedotjs, SiAngular, SiNodedotjs, SiLaravel,
+  SiDotnet, SiSpringboot, SiPostgresql, SiMongodb, SiDocker
+} from 'react-icons/si';
+
+const techIcons = {
+  'React': SiReact,
+  'Vue.js': SiVuedotjs,
+  'Angular': SiAngular,
+  'Node.js': SiNodedotjs,
+  'Express': SiNodedotjs,
+  'Laravel': SiLaravel,
+  '.NET': SiDotnet,
+  'Blazor': SiDotnet,
+  'Java': SiSpringboot,
+  'Spring Boot': SiSpringboot,
+  'PostgreSQL': SiPostgresql,
+  'MongoDB': SiMongodb,
+  'Docker': SiDocker,
+};
 
 const Works = () => {
   const [toggle, setToggle] = useState('All');
@@ -12,7 +31,7 @@ const Works = () => {
       setProjects(data);
     } else {
       const filteredProjects = data.filter((project) =>
-        project.type.includes(toggle)
+        project.type.some((t) => t.toLowerCase().includes(toggle.toLowerCase()))
       );
       setProjects(filteredProjects);
     }
@@ -26,8 +45,12 @@ const Works = () => {
   const programms = [
     { name: 'All' },
     { name: 'React' },
+    { name: 'Vue' },
     { name: 'Angular' },
+    { name: 'Node' },
     { name: 'Laravel' },
+    { name: '.NET' },
+    { name: 'Java' },
   ];
 
   return (
@@ -37,13 +60,16 @@ const Works = () => {
     >
       <div className="text-center mb-6 ">
         <h4 className="text-light text-sm font-semibold tracking-tight mb-2  tablet:text-base tablet:tracking-normal">
-          My Recent Works
+          Live Demo Projects
         </h4>
         <h2 className="text-primary text-xl font-semibold tablet:text-2xl">
           Portfolio
         </h2>
+        <p className="text-light text-sm mt-2 max-w-xl mx-auto">
+          8 full-stack projects deployed on a single VPS with Docker, Traefik, and CI/CD via GitHub Actions
+        </p>
       </div>
-      <div className="mb-5 flex justify-start items-center space-x-3 cursor-pointer">
+      <div className="mb-5 flex justify-start items-center flex-wrap gap-2 cursor-pointer">
         {programms.map((p, i) => (
           <div
             key={i}
@@ -56,50 +82,82 @@ const Works = () => {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-1 largePhone:grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 largePhone:grid-cols-2 tablet:grid-cols-2 laptop:grid-cols-3 gap-4">
         {projects.map((p, i) => (
           <div
             key={i}
-            className="bg-backGroundVariant py-4 px-4 tablet:px-4   rounded-3xl transition-custom hover:bg-transparent hover:border hover:border-primaryVariant"
+            className="bg-backGroundVariant py-5 px-5 rounded-3xl transition-custom hover:bg-transparent hover:border hover:border-primaryVariant"
           >
-            <div className="relative h-44 group">
-              <Image
-                src="/assets/nflix.jpg"
-                fill
-                className="object-cover rounded-3xl "
-                alt="project"
-              />
-              <div className="hidden group-hover:block transition-custom absolute inset-0 rounded-3xl bg-backGroundOpac">
-                <div className=" flex h-full justify-center items-center space-x-4">
-                  <Link
-                    href=""
-                    className="px-3 py-1 bg-backGround rounded-2xl text-sm font-semibold transition-custom hover:bg-transparent hover:border hover:border-primary"
-                  >
-                    Github
-                  </Link>
-                  <Link
-                    href=""
-                    className="px-3 py-1 bg-backGround rounded-2xl text-sm font-semibold transition-custom hover:bg-transparent hover:border hover:border-primary"
-                  >
-                    Website
-                  </Link>
-                </div>
-              </div>
+            {/* Tech icon row */}
+            <div className="flex items-center gap-3 mb-4">
+              {p.type.slice(0, 4).map((t, j) => {
+                const Icon = techIcons[t];
+                return Icon ? (
+                  <Icon key={j} className="h-6 w-6 text-primary opacity-80" title={t} />
+                ) : null;
+              })}
             </div>
-            <div className="mt-6">
-              <h3 className="text-lg font-semibold mb-2">{p.name}</h3>
-              <p className="mb-4 text-light text-sm">
-                BookStore app that allows users to store books and update
-                progress
+
+            {/* Project info */}
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-lg font-semibold">{p.name}</h3>
+                <span className="text-xs text-light bg-backGround px-2 py-0.5 rounded-full">
+                  {p.repos} repo{p.repos > 1 ? 's' : ''}
+                </span>
+              </div>
+              <p className="mb-4 text-light text-sm leading-relaxed">
+                {p.description}
               </p>
 
-              <div className="flex  flex-wrap ">
-                {p.type.map((t, i) => (
-                  <p key={i} className="text-primary text-sm px-2">
+              {/* Tech badges */}
+              <div className="flex flex-wrap gap-1.5 mb-4">
+                {p.type.map((t, j) => (
+                  <span key={j} className="text-xs bg-backGround text-primary px-2 py-0.5 rounded-full">
                     {t}
-                  </p>
+                  </span>
                 ))}
               </div>
+
+              {/* Action buttons */}
+              <div className="flex items-center gap-3">
+                <Link
+                  href={p.webLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-1.5 bg-primary text-backGround rounded-2xl text-sm font-semibold transition-custom hover:bg-transparent hover:text-primary hover:border hover:border-primary"
+                >
+                  Live Demo
+                </Link>
+                <Link
+                  href={p.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-1.5 bg-backGround rounded-2xl text-sm font-semibold transition-custom hover:bg-transparent hover:border hover:border-primary"
+                >
+                  GitHub
+                </Link>
+              </div>
+
+              {/* Service URLs */}
+              {p.services && p.services.length > 1 && (
+                <div className="mt-3 pt-3 border-t border-primaryVariant">
+                  <p className="text-xs text-light mb-1.5">Services:</p>
+                  <div className="flex flex-wrap gap-1">
+                    {p.services.map((s, k) => (
+                      <Link
+                        key={k}
+                        href={`https://${s}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-primary hover:underline"
+                      >
+                        {s.replace('.swiftapp.ch', '')}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         ))}

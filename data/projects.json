@@ -1,92 +1,82 @@
 [
     {
-        "name": "Ecommerce",
-        "type": [
-            "React",
-            "Mongo DB",
-            "Node",
-            "express"
-        ],
-        "description": "A web application built using React and Node.js.",
-        "githubLink": "https://github.com/project1",
-        "webLink": "https://www.project1.com",
-        "photo": "/assets/nflix.jpg"
+        "name": "RHNE Portal",
+        "type": ["React", "Node.js", "Express", "MongoDB"],
+        "description": "Multi-service HR portal with React frontend, admin dashboard, and Node.js REST API. Dockerized with Traefik reverse proxy.",
+        "githubLink": "https://github.com/Abdi-github/rhne-node-api",
+        "webLink": "https://rhne.swiftapp.ch",
+        "photo": "/assets/rhne.svg",
+        "repos": 3,
+        "services": ["rhne.swiftapp.ch", "rhne-admin.swiftapp.ch", "rhne-api.swiftapp.ch"]
     },
     {
-        "name": "Ecommerce",
-        "type": [
-            "React",
-            "Mongo DB",
-            "Node",
-            "express"
-        ],
-        "description": "A web application built using React and Node.js.",
-        "githubLink": "https://github.com/project1",
-        "webLink": "https://www.project1.com",
-        "photo": "https://www.example.com/project1.jpg"
+        "name": "Immobilier",
+        "type": ["React", "Vue.js", "Node.js", "Laravel", "PostgreSQL"],
+        "description": "Real estate platform with React & Vue frontends, admin panel, Node.js API, and Laravel backend. 5-repo microservice architecture.",
+        "githubLink": "https://github.com/Abdi-github/immobilier-api-node",
+        "webLink": "https://immobilier-react.swiftapp.ch",
+        "photo": "/assets/immobilier.svg",
+        "repos": 5,
+        "services": ["immobilier-react.swiftapp.ch", "immobilier-vue.swiftapp.ch", "immobilier-admin.swiftapp.ch", "immobilier-api.swiftapp.ch"]
     },
     {
-        "name": "Ecommerce",
-        "type": [
-            "React",
-            "Mongo DB",
-            "Node",
-            "express"
-        ],
-        "description": "A web application built using React and Node.js.",
-        "githubLink": "https://github.com/project1",
-        "webLink": "https://www.project1.com",
-        "photo": "https://www.example.com/project1.jpg"
+        "name": "Interdiscount",
+        "type": ["React", "Vue.js", "Node.js", "Laravel", "PostgreSQL"],
+        "description": "E-commerce platform inspired by Interdiscount. React & Vue storefronts, admin panel, Node.js API, and Laravel backend.",
+        "githubLink": "https://github.com/Abdi-github/interdiscount-api-node",
+        "webLink": "https://interdiscount-react.swiftapp.ch",
+        "photo": "/assets/interdiscount.svg",
+        "repos": 5,
+        "services": ["interdiscount-react.swiftapp.ch", "interdiscount-vue.swiftapp.ch", "interdiscount-admin.swiftapp.ch", "interdiscount-api.swiftapp.ch"]
     },
     {
-        "name": "Ecommerce",
-        "type": [
-            "React",
-            "Mongo DB",
-            "Node",
-            "express"
-        ],
-        "description": "A web application built using React and Node.js.",
-        "githubLink": "https://github.com/project1",
-        "webLink": "https://www.project1.com",
-        "photo": "https://www.example.com/project1.jpg"
+        "name": "Just Eat",
+        "type": ["React", "Vue.js", "Angular", "Node.js", "Laravel"],
+        "description": "Food delivery platform with Angular, React & Vue frontends, admin dashboard, Node.js API, and Laravel backend. 6-repo architecture.",
+        "githubLink": "https://github.com/Abdi-github/just-eat-api-node",
+        "webLink": "https://justeat-react.swiftapp.ch",
+        "photo": "/assets/justeat.svg",
+        "repos": 6,
+        "services": ["justeat-react.swiftapp.ch", "justeat-vue.swiftapp.ch", "justeat-angular.swiftapp.ch", "justeat-admin.swiftapp.ch", "justeat-api.swiftapp.ch"]
     },
     {
-        "name": "Blog",
-        "type": [
-            "React",
-            "mysql",
-            "Laravel",
-            "express"
-        ],
-        "description": "A web application built using React and Node.js.",
-        "githubLink": "https://github.com/project1",
-        "webLink": "https://www.project1.com",
-        "photo": "https://www.example.com/project1.jpg"
+        "name": "SwiftApp ERP",
+        "type": [".NET", "Blazor", "PostgreSQL", "Docker"],
+        "description": "Enterprise Resource Planning system built with .NET 9 and Blazor Server. Modular architecture with PostgreSQL persistence.",
+        "githubLink": "https://github.com/Abdi-github/SwiftApp.ERP",
+        "webLink": "https://erp-dotnet.swiftapp.ch",
+        "photo": "/assets/dotnet-erp.svg",
+        "repos": 1,
+        "services": ["erp-dotnet.swiftapp.ch"]
     },
     {
-        "name": "Hotel",
-        "type": [
-            "nextjs",
-            "mysql",
-            "symfony"
-        ],
-        "description": "A mobile app developed using Flutter framework.",
-        "githubLink": "https://github.com/project2",
-        "webLink": "https://www.project2.com",
-        "photo": "https://www.example.com/project2.jpg"
+        "name": "SwiftApp Postal",
+        "type": [".NET", "Blazor", "PostgreSQL", "Docker"],
+        "description": "Postal service management application built with .NET 9 and Blazor. Handles tracking, routing, and delivery workflows.",
+        "githubLink": "https://github.com/Abdi-github/SwiftApp.Postal",
+        "webLink": "https://postal-dotnet.swiftapp.ch",
+        "photo": "/assets/dotnet-postal.svg",
+        "repos": 1,
+        "services": ["postal-dotnet.swiftapp.ch"]
     },
     {
-        "name": "Some",
-        "type": [
-            "angular",
-            "tailwind",
-            "mysql",
-            "symfony"
-        ],
-        "description": "A data analysis project using Python and pandas library.",
-        "githubLink": "https://github.com/project3",
-        "webLink": "https://www.project3.com",
-        "photo": "https://www.example.com/project3.jpg"
+        "name": "Java ERP",
+        "type": ["Java", "Spring Boot", "PostgreSQL", "Docker"],
+        "description": "Enterprise Resource Planning system built with Java 21 and Spring Boot 3. REST API with Spring Security and JPA persistence.",
+        "githubLink": "https://github.com/Abdi-github/java-ERP",
+        "webLink": "https://erp-java.swiftapp.ch",
+        "photo": "/assets/java-erp.svg",
+        "repos": 1,
+        "services": ["erp-java.swiftapp.ch"]
+    },
+    {
+        "name": "La Poste",
+        "type": ["Java", "Spring Boot", "PostgreSQL", "Docker"],
+        "description": "Modular postal service system built with Java 21 and Spring Boot 3. Multi-module Maven project with microservice design.",
+        "githubLink": "https://github.com/Abdi-github/la-poste-modular",
+        "webLink": "https://laposte.swiftapp.ch",
+        "photo": "/assets/laposte.svg",
+        "repos": 1,
+        "services": ["laposte.swiftapp.ch"]
     }
 ]

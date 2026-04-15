@@ -1,0 +1,21 @@
+services:
+  fallback:
+    image: nginx:alpine
+    container_name: demo-fallback
+    restart: unless-stopped
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fallback.rule=HostRegexp(`.+\\.swiftapp\\.ch`)"
+      - "traefik.http.routers.fallback.priority=1"
+      - "traefik.http.routers.fallback.entrypoints=websecure"
+      - "traefik.http.routers.fallback.tls.certresolver=letsencrypt"
+      - "traefik.http.services.fallback.loadbalancer.server.port=80"
+
+networks:
+  traefik:
+    external: true

@@ -1,6 +1,7 @@
 import Header from '@/components/header/Header';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import Stats from '@/components/stats/Stats';
 import Intro from '@/components/intro/Intro';
 import Skills from '@/components/skills/Skills';
 import Works from '@/components/works/Works';
@@ -21,6 +22,7 @@ export default function Home(props) {
       </div> */}
       <Header />
       <FixedNav />
+      <Stats />
       <Intro />
       <Skills />
       <Works />

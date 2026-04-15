@@ -11,24 +11,24 @@ const Header = () => {
   const router = useRouter();
   return (
     <header id="home" className="mb-12">
-      <div className="container  px-4 pt-20 pb-8 tablet:max-w-2xl laptop:max-w-5xl   flex justify-between items-center  tablet:pt-30 laptop:pt-36">
+      <div className="container px-4 pt-20 pb-8 tablet:max-w-3xl laptop:max-w-6xl flex justify-between items-center tablet:pt-30 laptop:pt-36">
         <div>
           <Link
-            href="https://www.linkedin.com/in/meri-gogichashvili/"
+            href="https://www.linkedin.com/in/abdulkadir-ahmed"
             target="_blank"
             rel="noreferrer"
           >
             <BsLinkedin className="h-4 w-4 laptop:h-5 laptop:w-5  mb-6 text-primary hover:text-white transition-custom" />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/meri-gogichashvili/"
+            href="https://github.com/Abdi-github"
             target="_blank"
             rel="noreferrer"
           >
             <FaGithub className="h-4 w-4 laptop:h-5 laptop:w-5 mb-6 text-primary hover:text-white transition-custom" />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/meri-gogichashvili/"
+            href="https://twitter.com/"
             target="_blank"
             rel="noreferrer"
           >
@@ -44,7 +44,7 @@ const Header = () => {
               Abdulkadir Ahmed <br /> Hussien
             </h1>
             <h5 className="text-primary text-sm font-bold laptop:text-base ">
-              Full-stack Developer
+              {t('home:subtitle')}
             </h5>
           </div>
 

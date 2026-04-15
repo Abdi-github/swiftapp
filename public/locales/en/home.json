@@ -1,1 +1,99 @@
-{"cv":"Download CV","greet":"Hello I'm","lets":"Let's talk"}
+{
+  "greet": "Hello I'm",
+  "cv": "Download CV",
+  "lets": "Let's talk",
+  "subtitle": "Full-Stack Developer",
+  "about": {
+    "getToKnow": "Get to know",
+    "title": "About Me",
+    "experience": "Experience",
+    "devops": "DevOps",
+    "experienceSummary": "Full-Stack Developer with hands-on project experience",
+    "devopsSummary": "Docker, Traefik, CI/CD, VPS deployment",
+    "experienceText": "I bring concrete, hands-on experience building production-ready applications across the entire stack. From crafting pixel-perfect React, Vue.js and Angular interfaces to architecting secure Node.js, Laravel, .NET and Spring Boot backends — every project in my portfolio is a working, deployed system. I've built 8 distinct project groups encompassing 24 repositories: real estate platforms, e-commerce systems, food delivery apps, and enterprise ERP solutions. Each one demonstrates my ability to take a complex requirement and deliver a complete, functional product.",
+    "devopsText": "Every project I build goes beyond code — it runs in production. I containerize all applications with Docker, orchestrate them behind Traefik reverse proxy with automatic SSL certificates, and deploy on a single VPS serving 30+ services simultaneously. My CI/CD pipelines via GitHub Actions automate testing and deployment on every push. I manage Linux servers, configure Nginx, handle DNS routing, and monitor production systems — the full DevOps lifecycle from commit to live traffic."
+  },
+  "stats": {
+    "projects": "Projects",
+    "techStacks": "Tech Stacks",
+    "demoGroups": "Demo Groups"
+  },
+  "skills": {
+    "subtitle": "The Skills I Have",
+    "title": "Skills",
+    "frontend": "Front-end",
+    "backend": "Back-end",
+    "devops": "DevOps & Tools"
+  },
+  "portfolio": {
+    "subtitle": "Live Demo Projects",
+    "title": "Portfolio",
+    "description": "24 production-grade projects across 8 demo groups, deployed on a single VPS with Docker, Traefik, and CI/CD via GitHub Actions",
+    "all": "All",
+    "liveDemo": "Live Demo",
+    "github": "GitHub",
+    "services": "Services",
+    "repositories": "Repositories",
+    "repo": "repo",
+    "repos": "repos"
+  },
+  "contact": {
+    "subtitle": "Get In Touch",
+    "subtitleNote": "I do receive your messages and will respond asap if a valid email is provided :)",
+    "title": "Contact Me",
+    "email": "Email",
+    "messenger": "Messenger",
+    "whatsapp": "WhatsApp",
+    "sendMessage": "Send a message",
+    "namePlaceholder": "Your Full Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Your Message",
+    "submit": "Send Message",
+    "nameRequired": "Please enter your name.",
+    "emailRequired": "Please enter your email.",
+    "emailInvalid": "Please enter a valid email address.",
+    "messageRequired": "Please enter your message.",
+    "successToast": "Thank you, I will reply as soon as possible :)"
+  },
+  "footer": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "projects": {
+    "rhne": {
+      "name": "RHNE Portal",
+      "description": "Comprehensive HR management platform with role-based access control, employee dashboards, and real-time data analytics. React frontend with dedicated admin panel and secure Node.js REST API — a complete multi-service architecture."
+    },
+    "immobilier": {
+      "name": "Immobilier",
+      "description": "Enterprise-grade real estate platform featuring dual React & Vue.js storefronts, a powerful admin dashboard, and robust backends powered by Node.js and Laravel. Handles property listings, advanced search, bookings, and full agent management across 5 microservices."
+    },
+    "interdiscount": {
+      "name": "Interdiscount",
+      "description": "Full-featured e-commerce platform inspired by Switzerland's leading electronics retailer. Dual-framework storefronts (React & Vue.js), admin console, Node.js API, and Laravel backend with shopping cart, checkout, inventory tracking, and order management."
+    },
+    "justeat": {
+      "name": "Just Eat Suisse",
+      "description": "Feature-rich food delivery platform with three frontend implementations (Angular, React, Vue.js), admin dashboard for restaurant management, Node.js API, and Laravel backend. Handles menus, real-time order tracking, delivery routing, and payment workflows."
+    },
+    "erp-dotnet": {
+      "name": "Swiss Chrono ERP C#",
+      "description": "Enterprise Resource Planning system designed for Swiss watch manufacture and retail operations. Modular .NET 9 Blazor architecture covering inventory, sales, production planning, HR, accounting, and quality control — with multi-language support and role-based access."
+    },
+    "postal-dotnet": {
+      "name": "La Poste .NET",
+      "description": "Postal service management platform designed for Swiss logistics operations. Built with .NET 9 Blazor, handling package tracking, delivery routing, depot management, and real-time shipment monitoring with automated workflow orchestration."
+    },
+    "erp-java": {
+      "name": "Swiss Chrono ERP Java",
+      "description": "Full-scale Enterprise Resource Planning system built with Java 21 and Spring Boot 3. REST API with Spring Security, JPA persistence, and modular architecture spanning inventory, sales, purchasing, production, HR, and accounting."
+    },
+    "laposte": {
+      "name": "La Poste",
+      "description": "Modular postal logistics system built with Java 21 and Spring Boot 3. Multi-module Maven architecture implementing microservice patterns for parcel tracking, route optimization, delivery scheduling, and depot management."
+    }
+  }
+}

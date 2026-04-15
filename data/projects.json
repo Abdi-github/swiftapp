@@ -1,82 +1,145 @@
 [
     {
         "name": "RHNE Portal",
+        "key": "rhne",
+        "category": "Full-Stack",
         "type": ["React", "Node.js", "Express", "MongoDB"],
-        "description": "Multi-service HR portal with React frontend, admin dashboard, and Node.js REST API. Dockerized with Traefik reverse proxy.",
+        "description": "Comprehensive HR management platform with role-based access control, employee dashboards, and real-time data analytics. React frontend with dedicated admin panel and secure Node.js REST API — a complete multi-service architecture.",
         "githubLink": "https://github.com/Abdi-github/rhne-node-api",
         "webLink": "https://rhne.swiftapp.ch",
         "photo": "/assets/rhne.svg",
+        "logo": "/assets/rhne-logo.svg",
         "repos": 3,
-        "services": ["rhne.swiftapp.ch", "rhne-admin.swiftapp.ch", "rhne-api.swiftapp.ch"]
+        "services": ["rhne.swiftapp.ch", "rhne-admin.swiftapp.ch", "rhne-api.swiftapp.ch"],
+        "githubRepos": [
+            {"name": "rhne-frontend-react", "url": "https://github.com/Abdi-github/rhne-frontend-react"},
+            {"name": "rhne-admin-react", "url": "https://github.com/Abdi-github/rhne-admin-react"},
+            {"name": "rhne-node-api", "url": "https://github.com/Abdi-github/rhne-node-api"}
+        ]
     },
     {
         "name": "Immobilier",
-        "type": ["React", "Vue.js", "Node.js", "Laravel", "PostgreSQL"],
-        "description": "Real estate platform with React & Vue frontends, admin panel, Node.js API, and Laravel backend. 5-repo microservice architecture.",
+        "key": "immobilier",
+        "category": "Full-Stack",
+        "type": ["React", "Vue.js", "Node.js", "Laravel", "MySQL", "PostgreSQL"],
+        "description": "Enterprise-grade real estate platform featuring dual React & Vue.js storefronts, a powerful admin dashboard, and robust backends powered by Node.js and Laravel. Handles property listings, advanced search, bookings, and full agent management across 5 microservices.",
         "githubLink": "https://github.com/Abdi-github/immobilier-api-node",
         "webLink": "https://immobilier-react.swiftapp.ch",
         "photo": "/assets/immobilier.svg",
+        "logo": "/assets/immobilier-logo.svg",
         "repos": 5,
-        "services": ["immobilier-react.swiftapp.ch", "immobilier-vue.swiftapp.ch", "immobilier-admin.swiftapp.ch", "immobilier-api.swiftapp.ch"]
+        "services": ["immobilier-react.swiftapp.ch", "immobilier-vue.swiftapp.ch", "immobilier-admin.swiftapp.ch", "immobilier-api.swiftapp.ch"],
+        "githubRepos": [
+            {"name": "immobilier-frontend-react", "url": "https://github.com/Abdi-github/immobilier-frontend-react"},
+            {"name": "immobilier-frontend-vue", "url": "https://github.com/Abdi-github/immobilier-frontend-vue"},
+            {"name": "immobilier-admin-react", "url": "https://github.com/Abdi-github/immobilier-admin-react"},
+            {"name": "immobilier-api-node", "url": "https://github.com/Abdi-github/immobilier-api-node"},
+            {"name": "immobilier-laravel-backend", "url": "https://github.com/Abdi-github/immobilier-laravel-backend"}
+        ]
     },
     {
         "name": "Interdiscount",
-        "type": ["React", "Vue.js", "Node.js", "Laravel", "PostgreSQL"],
-        "description": "E-commerce platform inspired by Interdiscount. React & Vue storefronts, admin panel, Node.js API, and Laravel backend.",
+        "key": "interdiscount",
+        "category": "Full-Stack",
+        "type": ["React", "Vue.js", "Node.js", "Laravel", "MySQL", "PostgreSQL"],
+        "description": "Full-featured e-commerce platform inspired by Switzerland's leading electronics retailer. Dual-framework storefronts (React & Vue.js), admin console, Node.js API, and Laravel backend with shopping cart, checkout, inventory tracking, and order management.",
         "githubLink": "https://github.com/Abdi-github/interdiscount-api-node",
         "webLink": "https://interdiscount-react.swiftapp.ch",
         "photo": "/assets/interdiscount.svg",
+        "logo": "/assets/interdiscount-logo.svg",
         "repos": 5,
-        "services": ["interdiscount-react.swiftapp.ch", "interdiscount-vue.swiftapp.ch", "interdiscount-admin.swiftapp.ch", "interdiscount-api.swiftapp.ch"]
+        "services": ["interdiscount-react.swiftapp.ch", "interdiscount-vue.swiftapp.ch", "interdiscount-admin.swiftapp.ch", "interdiscount-api.swiftapp.ch"],
+        "githubRepos": [
+            {"name": "interdiscount-frontend-react", "url": "https://github.com/Abdi-github/interdiscount-frontend-react"},
+            {"name": "interdiscount-frontend-vue", "url": "https://github.com/Abdi-github/interdiscount-frontend-vue"},
+            {"name": "interdiscount-admin-react", "url": "https://github.com/Abdi-github/interdiscount-admin-react"},
+            {"name": "interdiscount-api-node", "url": "https://github.com/Abdi-github/interdiscount-api-node"},
+            {"name": "interdiscount-laravel-backend", "url": "https://github.com/Abdi-github/interdiscount-laravel-backend"}
+        ]
     },
     {
-        "name": "Just Eat",
-        "type": ["React", "Vue.js", "Angular", "Node.js", "Laravel"],
-        "description": "Food delivery platform with Angular, React & Vue frontends, admin dashboard, Node.js API, and Laravel backend. 6-repo architecture.",
+        "name": "Just Eat Suisse",
+        "key": "justeat",
+        "category": "Full-Stack",
+        "type": ["React", "Vue.js", "Angular", "Node.js", "Laravel", "MySQL"],
+        "description": "Feature-rich food delivery platform with three frontend implementations (Angular, React, Vue.js), admin dashboard for restaurant management, Node.js API, and Laravel backend. Handles menus, real-time order tracking, delivery routing, and payment workflows.",
         "githubLink": "https://github.com/Abdi-github/just-eat-api-node",
         "webLink": "https://justeat-react.swiftapp.ch",
         "photo": "/assets/justeat.svg",
+        "logo": "/assets/just-eat-logo.svg",
         "repos": 6,
-        "services": ["justeat-react.swiftapp.ch", "justeat-vue.swiftapp.ch", "justeat-angular.swiftapp.ch", "justeat-admin.swiftapp.ch", "justeat-api.swiftapp.ch"]
+        "services": ["justeat-react.swiftapp.ch", "justeat-vue.swiftapp.ch", "justeat-angular.swiftapp.ch", "justeat-admin.swiftapp.ch", "justeat-api.swiftapp.ch"],
+        "githubRepos": [
+            {"name": "just-eat-frontend-react", "url": "https://github.com/Abdi-github/just-eat-frontend-react"},
+            {"name": "just-eat-frontend-vue", "url": "https://github.com/Abdi-github/just-eat-frontend-vue"},
+            {"name": "just-eat-frontend-angular", "url": "https://github.com/Abdi-github/just-eat-frontend-angular"},
+            {"name": "just-eat-admin-react", "url": "https://github.com/Abdi-github/just-eat-admin-react"},
+            {"name": "just-eat-api-node", "url": "https://github.com/Abdi-github/just-eat-api-node"},
+            {"name": "just-eat-laravel-backend", "url": "https://github.com/Abdi-github/just-eat-laravel-backend"}
+        ]
     },
     {
-        "name": "SwiftApp ERP",
+        "name": "Swiss Chrono ERP C#",
+        "key": "erp-dotnet",
+        "category": "Enterprise",
         "type": [".NET", "Blazor", "PostgreSQL", "Docker"],
-        "description": "Enterprise Resource Planning system built with .NET 9 and Blazor Server. Modular architecture with PostgreSQL persistence.",
+        "description": "Enterprise Resource Planning system designed for Swiss watch manufacture and retail operations. Modular .NET 9 Blazor architecture covering inventory, sales, production planning, HR, accounting, and quality control — with multi-language support and role-based access.",
         "githubLink": "https://github.com/Abdi-github/SwiftApp.ERP",
         "webLink": "https://erp-dotnet.swiftapp.ch",
         "photo": "/assets/dotnet-erp.svg",
+        "logo": "/assets/swiss-chrono-logo.svg",
         "repos": 1,
-        "services": ["erp-dotnet.swiftapp.ch"]
+        "services": ["erp-dotnet.swiftapp.ch"],
+        "githubRepos": [
+            {"name": "SwiftApp.ERP", "url": "https://github.com/Abdi-github/SwiftApp.ERP"}
+        ]
     },
     {
-        "name": "SwiftApp Postal",
+        "name": "La Poste .NET",
+        "key": "postal-dotnet",
+        "category": "Enterprise",
         "type": [".NET", "Blazor", "PostgreSQL", "Docker"],
-        "description": "Postal service management application built with .NET 9 and Blazor. Handles tracking, routing, and delivery workflows.",
+        "description": "Postal service management platform designed for Swiss logistics operations. Built with .NET 9 Blazor, handling package tracking, delivery routing, depot management, and real-time shipment monitoring with automated workflow orchestration.",
         "githubLink": "https://github.com/Abdi-github/SwiftApp.Postal",
         "webLink": "https://postal-dotnet.swiftapp.ch",
         "photo": "/assets/dotnet-postal.svg",
+        "logo": "/assets/la-poste-logo.svg",
         "repos": 1,
-        "services": ["postal-dotnet.swiftapp.ch"]
+        "services": ["postal-dotnet.swiftapp.ch"],
+        "githubRepos": [
+            {"name": "SwiftApp.Postal", "url": "https://github.com/Abdi-github/SwiftApp.Postal"}
+        ]
     },
     {
-        "name": "Java ERP",
+        "name": "Swiss Chrono ERP Java",
+        "key": "erp-java",
+        "category": "Enterprise",
         "type": ["Java", "Spring Boot", "PostgreSQL", "Docker"],
-        "description": "Enterprise Resource Planning system built with Java 21 and Spring Boot 3. REST API with Spring Security and JPA persistence.",
+        "description": "Full-scale Enterprise Resource Planning system built with Java 21 and Spring Boot 3. REST API with Spring Security, JPA persistence, and modular architecture spanning inventory, sales, purchasing, production, HR, and accounting.",
         "githubLink": "https://github.com/Abdi-github/java-ERP",
         "webLink": "https://erp-java.swiftapp.ch",
         "photo": "/assets/java-erp.svg",
+        "logo": "/assets/swiss-chrono-logo.svg",
         "repos": 1,
-        "services": ["erp-java.swiftapp.ch"]
+        "services": ["erp-java.swiftapp.ch"],
+        "githubRepos": [
+            {"name": "java-ERP", "url": "https://github.com/Abdi-github/java-ERP"}
+        ]
     },
     {
         "name": "La Poste",
+        "key": "laposte",
+        "category": "Enterprise",
         "type": ["Java", "Spring Boot", "PostgreSQL", "Docker"],
-        "description": "Modular postal service system built with Java 21 and Spring Boot 3. Multi-module Maven project with microservice design.",
+        "description": "Modular postal logistics system built with Java 21 and Spring Boot 3. Multi-module Maven architecture implementing microservice patterns for parcel tracking, route optimization, delivery scheduling, and depot management.",
         "githubLink": "https://github.com/Abdi-github/la-poste-modular",
         "webLink": "https://laposte.swiftapp.ch",
         "photo": "/assets/laposte.svg",
+        "logo": "/assets/la-poste-logo.svg",
         "repos": 1,
-        "services": ["laposte.swiftapp.ch"]
+        "services": ["laposte.swiftapp.ch"],
+        "githubRepos": [
+            {"name": "la-poste-modular", "url": "https://github.com/Abdi-github/la-poste-modular"}
+        ]
     }
 ]

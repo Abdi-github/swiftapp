@@ -2,9 +2,10 @@ import Link from 'next/link';
 import React from 'react';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
-import { CircleFlag } from 'react-circle-flags';
+import { useTranslation } from 'next-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <div className=" mt-20 pt-10 pb-40 bg-backGroundVariant">
       <div className="mb-20">
@@ -17,50 +18,50 @@ const Footer = () => {
           href="#home"
           className="text-primary font-semibold transition-custom hover:text-light"
         >
-          Home
+          {t('home:footer.home')}
         </Link>
         <Link
           href="#about"
           className="text-primary font-semibold transition-custom hover:text-light"
         >
-          About
+          {t('home:footer.about')}
         </Link>
         <Link
           href="#skills"
           className="text-primary font-semibold transition-custom hover:text-light"
         >
-          Skills
+          {t('home:footer.skills')}
         </Link>
         <Link
           href="#portfolio"
           className="text-primary font-semibold transition-custom hover:text-light"
         >
-          Portfolio
+          {t('home:footer.portfolio')}
         </Link>
         <Link
           href="#contact"
           className="text-primary font-semibold transition-custom hover:text-light"
         >
-          Contact
+          {t('home:footer.contact')}
         </Link>
       </div>
       <div className="flex justify-center space-x-5">
         <Link
-          href="https://www.linkedin.com/in/meri-gogichashvili/"
+          href="https://www.linkedin.com/in/abdulkadir-ahmed/"
           target="_blank"
           rel="noreferrer"
         >
           <BsLinkedin className="h-6 w-6 tablet:h-7 tablet:w.7 hover:text-primary transition-custom" />
         </Link>
         <Link
-          href="https://www.linkedin.com/in/meri-gogichashvili/"
+          href="https://github.com/Abdi-github"
           target="_blank"
           rel="noreferrer"
         >
           <FaGithub className="h-6 w-6 tablet:h-7 tablet:w.7 hover:text-primary transition-custom" />
         </Link>
         <Link
-          href="https://www.linkedin.com/in/meri-gogichashvili/"
+          href="https://twitter.com/"
           target="_blank"
           rel="noreferrer"
         >

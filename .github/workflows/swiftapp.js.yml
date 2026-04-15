@@ -1,36 +1,36 @@
-name: swiftapp CI
-
-env:
-  I18NEXUS_KEY: ${{secrets.I18NEXUS_KEY}}
-  NEXT_PUBLIC_EMAIL_PUBLIC_KEY: ${{secrets.NEXT_PUBLIC_EMAIL_PUBLIC_KEY}}
-  NEXT_PUBLIC_EMAIL_SERVICE_ID: ${{secrets.NEXT_PUBLIC_EMAIL_SERVICE_ID}}
-  NEXT_PUBLIC_EMAIL_TEMPLATE_ID: ${{secrets.NEXT_PUBLIC_EMAIL_TEMPLATE_ID}}
+name: Deploy to VPS
 
 on:
   push:
-    branches: ['main']
-  pull_request:
-    branches: ['main']
+    branches: [main]
 
 jobs:
-  build:
-    runs-on: self-hosted
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+  deploy:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm i
-      - run: npm run build
-      - run: pm2 stop 0
-      - run: pm2 start 0
-      - run: pm2 save
-      - run: sudo service nginx restart
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            REPO="${{ github.event.repository.name }}"
+            APP_DIR="/opt/apps/$REPO"
+
+            echo "=== Deploying $REPO ==="
+            cd "$APP_DIR"
+            git pull origin main
+
+            # Detect compose file
+            if [ -f compose.prod.yaml ]; then
+              CF="compose.prod.yaml"
+            elif [ -f docker-compose.prod.yml ]; then
+              CF="docker-compose.prod.yml"
+            else
+              CF="docker-compose.yml"
+            fi
+
+            echo "Using compose file: $CF"
+            docker compose -f "$CF" up -d --build
+            echo "✓ Deploy complete"

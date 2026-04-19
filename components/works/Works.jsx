@@ -246,7 +246,7 @@ const Works = () => {
                   <LinkPopover
                     items={
                       p.services && p.services.length > 0
-                        ? p.services.map(s => ({ name: s.replace('.swiftapp.ch', ''), url: `https://${s}` }))
+                        ? p.services.map(s => typeof s === 'object' ? s : ({ name: s.replace('.swiftapp.ch', ''), url: `https://${s}` }))
                         : [{ name: translatedName, url: p.webLink }]
                     }
                     label={t('home:portfolio.liveDemo')}

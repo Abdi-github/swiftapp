@@ -48,7 +48,7 @@
         "photo": "/assets/interdiscount.svg",
         "logo": "/assets/interdiscount-icon.svg",
         "repos": 5,
-        "services": ["interdiscount-react.swiftapp.ch", "interdiscount-vue.swiftapp.ch", "interdiscount-admin.swiftapp.ch", "interdiscount-api.swiftapp.ch"],
+        "services": ["interdiscount-react.swiftapp.ch", "interdiscount-vue.swiftapp.ch", "interdiscount-admin.swiftapp.ch", "interdiscount-api.swiftapp.ch", "interdiscount.swiftapp.ch"],
         "githubRepos": [
             {"name": "interdiscount-frontend-react", "url": "https://github.com/Abdi-github/interdiscount-frontend-react"},
             {"name": "interdiscount-frontend-vue", "url": "https://github.com/Abdi-github/interdiscount-frontend-vue"},

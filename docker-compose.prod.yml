@@ -9,7 +9,7 @@ services:
         - NEXT_PUBLIC_EMAIL_TEMPLATE_ID=${NEXT_PUBLIC_EMAIL_TEMPLATE_ID}
         - NEXT_PUBLIC_MODE=${NEXT_PUBLIC_MODE}
     container_name: swiftapp
-    restart: unless-stopped
+    restart: no
     oom_score_adj: -1000
     networks:
       - traefik

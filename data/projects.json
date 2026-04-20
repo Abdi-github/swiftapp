@@ -68,7 +68,7 @@
         "photo": "/assets/justeat.svg",
         "logo": "/assets/just-eat-icon.svg",
         "repos": 6,
-        "services": ["justeat-react.swiftapp.ch", "justeat-vue.swiftapp.ch", "justeat-angular.swiftapp.ch", "justeat-admin.swiftapp.ch", "justeat-api.swiftapp.ch", "justeat.swiftapp.ch", {"name": "API Docs (Laravel)", "url": "https://justeat.swiftapp.ch/docs/api/v1"}],
+        "services": ["justeat-react.swiftapp.ch", "justeat-vue.swiftapp.ch", "justeat-angular.swiftapp.ch", "justeat-admin.swiftapp.ch", "justeat-api.swiftapp.ch", "justeat.swiftapp.ch", {"name": "API Docs (Laravel)", "url": "https://justeat.swiftapp.ch/docs/api/v1"}, {"name": "API Docs (Node)", "url": "https://justeat-api.swiftapp.ch/api/v1/docs"}],
         "githubRepos": [
             {"name": "just-eat-frontend-react", "url": "https://github.com/Abdi-github/just-eat-frontend-react"},
             {"name": "just-eat-frontend-vue", "url": "https://github.com/Abdi-github/just-eat-frontend-vue"},

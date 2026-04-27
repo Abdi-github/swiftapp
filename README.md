@@ -22,6 +22,27 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Portfolio QR Code
+
+The permanent QR code flow uses `https://swiftapp.ch/go` as the encoded URL.
+That route performs a non-permanent server-side redirect to the live portfolio destination so the printed QR can stay the same even if the final homepage changes later.
+
+Generate the QR assets with:
+
+```bash
+npm run generate:qr
+```
+
+This creates these files in `public/assets/`:
+
+- `swiftapp-portfolio-qr.svg`
+- `swiftapp-portfolio-qr.png`
+
+Optional environment variables:
+
+- `NEXT_PUBLIC_QR_URL` to change the encoded QR URL
+- `QR_REDIRECT_DESTINATION` to change where `/go` redirects
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

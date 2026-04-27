@@ -12,7 +12,9 @@
     --color-primary: #4db5ff;
     --color-primary-variant: #4db5ff66;
     --color-white: #fff;
-    --color-light: #ffffff99;
+    /* --color-light: #ffffff99; */
+    --color-light: #ffffffce;
+    --color-light-variant: #fffffff3;
     --transition: all 400ms ease;
   }
 

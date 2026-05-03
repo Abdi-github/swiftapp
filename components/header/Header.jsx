@@ -6,9 +6,27 @@ import { CircleFlag } from 'react-circle-flags';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
+const CV_BY_LOCALE = {
+  en: {
+    href: '/assets/CV_EN.pdf',
+    download: 'CV_EN.pdf',
+  },
+  fr: {
+    href: '/assets/CV_FR.pdf',
+    download: 'CV_FR.pdf',
+  },
+  de: {
+    href: '/assets/CV_DE.pdf',
+    download: 'CV_DE.pdf',
+  },
+};
+
 const Header = () => {
   const { t } = useTranslation();
   const router = useRouter();
+  const activeLocale = router.locale || 'fr';
+  const cvFile = CV_BY_LOCALE[activeLocale] || CV_BY_LOCALE.fr;
+
   return (
     <header id="home" className="mb-12">
       <div className="container px-4 pt-20 pb-8 tablet:max-w-3xl laptop:max-w-6xl flex justify-between items-center tablet:pt-30 laptop:pt-36">
@@ -49,11 +67,13 @@ const Header = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-3 tablet:grid-cols-2 tablet:gap-4">
-            <button className=" px-3 py-2 border border-primary rounded-md text-primary hover:bg-white hover:text-backGround hover:border-transparent font-semibold transition-custom">
-              <Link href="/assets/cvvv.pdf" download="cvvv">
+            <a
+              href={cvFile.href}
+              download={cvFile.download}
+              className="px-3 py-2 border border-primary rounded-md text-primary hover:bg-white hover:text-backGround hover:border-transparent font-semibold transition-custom"
+            >
                 {t('home:cv')}
-              </Link>
-            </button>
+            </a>
             <button className="px-3 py-2 bg-primary rounded-md text-backGround hover:bg-white font-semibold transition-custom">
               <Link href="#contact"> {t('home:lets')}</Link>
             </button>

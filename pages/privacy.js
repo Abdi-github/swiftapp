@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
       <h2>3. Third-party processors</h2>
       <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
         <thead>
-          <tr style={{ background: "#f5f5f5" }}>
+          <tr style={{ background: "#000" }}>
             <th style={{ textAlign: "left", padding: "8px", border: "1px solid #ddd" }}>Processor</th>
             <th style={{ textAlign: "left", padding: "8px", border: "1px solid #ddd" }}>Purpose</th>
             <th style={{ textAlign: "left", padding: "8px", border: "1px solid #ddd" }}>Location</th>

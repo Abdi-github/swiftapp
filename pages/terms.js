@@ -1,7 +1,7 @@
 
 export default function TermsOfService() {
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "60px 24px", fontFamily: "sans-serif", lineHeight: 1.7, color: "#222" }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "60px 24px", fontFamily: "sans-serif", lineHeight: 1.7, color: "#fff" }}>
       <h1>Terms of Service</h1>
       <p><em>Last updated: 31 May 2026</em></p>
 

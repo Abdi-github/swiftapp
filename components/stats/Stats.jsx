@@ -1,10 +1,20 @@
-import { FaProjectDiagram, FaServer, FaLayerGroup } from 'react-icons/fa';
+import { FaLayerGroup, FaProjectDiagram, FaServer } from 'react-icons/fa';
 import {
-  SiReact, SiVuedotjs, SiAngular, SiNextdotjs, SiNodedotjs,
-  SiLaravel, SiSpringboot, SiDotnet, SiPostgresql, SiMongodb,
-  SiMysql, SiDocker, SiTailwindcss
+  SiAngular,
+  SiDocker,
+  SiLaravel,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiReact,
+  SiSpringboot,
+  SiTailwindcss,
+  SiVuedotjs,
 } from 'react-icons/si';
 import { useTranslation } from 'next-i18next';
+import Card from '@/components/ui/Card';
 
 const techBadges = [
   { name: 'React', icon: SiReact },
@@ -14,7 +24,6 @@ const techBadges = [
   { name: 'Node.js', icon: SiNodedotjs },
   { name: 'Laravel', icon: SiLaravel },
   { name: 'Spring Boot', icon: SiSpringboot },
-  { name: '.NET / C#', icon: SiDotnet },
   { name: 'PostgreSQL', icon: SiPostgresql },
   { name: 'MySQL', icon: SiMysql },
   { name: 'MongoDB', icon: SiMongodb },
@@ -26,40 +35,37 @@ const Stats = () => {
   const { t } = useTranslation();
 
   const stats = [
-    { value: '24', label: t('home:stats.projects'), icon: FaProjectDiagram },
-    { value: '7', label: t('home:stats.techStacks'), icon: FaLayerGroup },
+    { value: '20+', label: t('home:stats.projects'), icon: FaProjectDiagram },
+    { value: '8+', label: t('home:stats.techStacks'), icon: FaLayerGroup },
     { value: '8', label: t('home:stats.demoGroups'), icon: FaServer },
   ];
 
   return (
-    <div className="container px-4 mt-12 mb-16 tablet:max-w-3xl laptop:max-w-6xl">
-      {/* Stats cards */}
-      <div className="flex justify-center gap-4 tablet:gap-6 flex-wrap">
-        {stats.map((s, i) => (
-          <div
-            key={i}
-            className="bg-backGroundVariant border border-primaryVariant rounded-2xl px-6 py-4 min-w-[140px] text-center transition-custom hover:border-primary"
-          >
-            <s.icon className="w-5 h-5 text-primary mx-auto mb-2" />
-            <div className="text-2xl font-bold text-primary">{s.value}</div>
-            <div className="text-xs text-light uppercase tracking-wider mt-1">{s.label}</div>
-          </div>
+    <section className="mx-auto mt-10 max-w-6xl px-4 tablet:px-6">
+      <div className="grid gap-4 tablet:grid-cols-3">
+        {stats.map((s) => (
+          <Card key={s.label} className="p-6 text-center">
+            <s.icon className="mx-auto h-6 w-6 text-primary" />
+            <div className="mt-4 text-4xl font-black text-white">{s.value}</div>
+            <div className="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-light">
+              {s.label}
+            </div>
+          </Card>
         ))}
       </div>
 
-      {/* Tech badges row */}
-      <div className="flex justify-center flex-wrap gap-2 mt-6">
-        {techBadges.map((t, i) => (
+      <div className="mt-5 flex flex-wrap justify-center gap-2">
+        {techBadges.map((item) => (
           <span
-            key={i}
-            className="inline-flex items-center gap-1.5 bg-backGroundVariant border border-primaryVariant rounded-full px-3 py-1 text-xs text-light transition-custom hover:border-primary hover:text-primary"
+            key={item.name}
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.055] px-3 py-2 text-xs font-bold text-light backdrop-blur-xl transition-custom hover:border-primaryVariant hover:text-primary"
           >
-            <t.icon className="w-3.5 h-3.5" />
-            {t.name}
+            <item.icon className="h-4 w-4" />
+            {item.name}
           </span>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

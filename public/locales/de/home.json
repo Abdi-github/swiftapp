@@ -45,15 +45,20 @@
     "messenger": "Messenger",
     "whatsapp": "WhatsApp",
     "sendMessage": "Nachricht senden",
-    "namePlaceholder": "Ihr vollständiger Name",
+    "namePlaceholder": "Ihr Name oder Firmenname",
     "emailPlaceholder": "Ihre E-Mail",
     "messagePlaceholder": "Ihre Nachricht",
     "submit": "Nachricht senden",
+    "sending": "Wird gesendet...",
     "nameRequired": "Bitte geben Sie Ihren Namen ein.",
     "emailRequired": "Bitte geben Sie Ihre E-Mail ein.",
     "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
     "messageRequired": "Bitte geben Sie Ihre Nachricht ein.",
-    "successToast": "Vielen Dank, ich werde so schnell wie möglich antworten :)"
+    "successToast": "Vielen Dank, ich werde so schnell wie möglich antworten :)",
+    "successTitle": "Nachricht erfolgreich gesendet",
+    "successMessage": "Vielen Dank für Ihre Nachricht. Sie ist in meinem Posteingang angekommen, und ich antworte Ihnen so schnell wie möglich an die angegebene E-Mail-Adresse.",
+    "successButton": "Weitere Nachricht senden",
+    "submitError": "Ihre Nachricht konnte im Moment nicht gesendet werden. Bitte versuchen Sie es gleich noch einmal oder kontaktieren Sie mich direkt per E-Mail."
   },
   "footer": {
     "home": "Startseite",

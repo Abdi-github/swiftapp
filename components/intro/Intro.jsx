@@ -1,82 +1,79 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaAward, FaServer } from 'react-icons/fa';
 import { useTranslation } from 'next-i18next';
+import Card from '@/components/ui/Card';
 
 const Intro = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('experience');
 
+  const tabs = [
+    {
+      key: 'experience',
+      icon: FaAward,
+      title: t('home:about.experience'),
+      summary: t('home:about.experienceSummary'),
+      text: t('home:about.experienceText'),
+    },
+    {
+      key: 'devops',
+      icon: FaServer,
+      title: t('home:about.devops'),
+      summary: t('home:about.devopsSummary'),
+      text: t('home:about.devopsText'),
+    },
+  ];
+
+  const active = tabs.find((tab) => tab.key === activeTab);
+
   return (
-    <div
-      className="container px-4 tablet:max-w-3xl laptop:max-w-6xl"
-      id="about"
-    >
-      <div className="text-center mb-10">
-        <h4 className="text-light text-sm font-semibold tracking-tight mb-2 tablet:text-base tablet:tracking-normal">
-          {t('home:about.getToKnow')}
-        </h4>
-        <h2 className="text-primary text-xl font-semibold tablet:text-2xl">
-          {t('home:about.title')}
-        </h2>
+    <section className="page-shell">
+      <div className="max-w-4xl">
+        <p className="section-kicker">{t('home:about.getToKnow')}</p>
+        <h1 className="section-title">{t('home:about.title')}</h1>
+        <p className="section-copy">
+          A portfolio for employers who want to see breadth, production thinking, and the ability
+          to take a feature from interface to deployment.
+        </p>
       </div>
-      <div className="grid grid-cols-1 gap-4 laptop:grid-cols-2 laptop:gap-10">
-        <div className="mx-auto laptop:ml-4 w-[210px] h-60 tablet:w-60 laptop:w-80 laptop:h-96 mb-12 tablet:mb-16 relative bg-gradient-to-br from-transparent via-primary to-transparent rounded-3xl">
-          <Image
-            src="/assets/m.png"
-            fill
-            className="object-cover rounded-3xl rotate-[10deg] transition-custom hover:rotate-0"
-            alt="me"
-          />
-        </div>
-        <div>
-          <div className="grid grid-cols-2 gap-4 mb-8">
+
+      <div className="mt-10 grid gap-5 laptop:grid-cols-[0.8fr_1.2fr]">
+        <div className="grid gap-4">
+          {tabs.map((tab) => (
             <button
-              onClick={() => setActiveTab('experience')}
-              className={`py-10 px-2 tablet:px-4 flex flex-col items-center text-center rounded-3xl transition-custom cursor-pointer ${
-                activeTab === 'experience'
-                  ? 'bg-transparent border-2 border-primary'
-                  : 'bg-backGroundVariant hover:bg-transparent hover:border hover:border-primaryVariant'
+              key={tab.key}
+              type="button"
+              onClick={() => setActiveTab(tab.key)}
+              className={`glass-card p-6 text-left transition-custom hover:border-primaryVariant ${
+                activeTab === tab.key ? 'border-primaryVariant bg-primary/10' : ''
               }`}
             >
-              <FaAward className="w-6 h-6 text-primary" />
-              <h4 className="font-semibold mt-6 mb-2">{t('home:about.experience')}</h4>
-              <p className="text-light text-sm font-semibold">
-                {t('home:about.experienceSummary')}
-              </p>
+              <tab.icon className="h-6 w-6 text-primary" />
+              <h2 className="mt-5 text-xl font-black text-white">{tab.title}</h2>
+              <p className="mt-3 text-sm font-semibold leading-7 text-light">{tab.summary}</p>
             </button>
-            <button
-              onClick={() => setActiveTab('devops')}
-              className={`py-10 px-2 tablet:px-4 flex flex-col items-center text-center rounded-3xl transition-custom cursor-pointer ${
-                activeTab === 'devops'
-                  ? 'bg-transparent border-2 border-primary'
-                  : 'bg-backGroundVariant hover:bg-transparent hover:border hover:border-primaryVariant'
-              }`}
-            >
-              <FaServer className="w-6 h-6 text-primary" />
-              <h4 className="font-semibold mt-6 mb-2">{t('home:about.devops')}</h4>
-              <p className="text-light text-sm font-semibold">
-                {t('home:about.devopsSummary')}
-              </p>
-            </button>
-          </div>
-          <div className="mb-7">
-            <p className="font-roboto text-light text-base tablet:text-lg tablet:font-semibold text-justify leading-relaxed">
-              {activeTab === 'experience'
-                ? t('home:about.experienceText')
-                : t('home:about.devopsText')
-              }
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <button className="px-3 py-2 bg-primary rounded-md text-backGround hover:bg-white font-semibold transition-custom">
-              <Link href="#contact">{t('home:lets')}</Link>
-            </button>
-          </div>
+          ))}
         </div>
+
+        <Card className="p-7 tablet:p-9">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">
+            {active.title}
+          </p>
+          <p className="mt-6 text-base font-semibold leading-8 text-light tablet:text-lg">
+            {active.text}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link href="/portfolio" className="primary-button">
+              {t('home:portfolio.title')}
+            </Link>
+            <Link href="/contact" className="ghost-button">
+              {t('home:lets')}
+            </Link>
+          </div>
+        </Card>
       </div>
-    </div>
+    </section>
   );
 };
 

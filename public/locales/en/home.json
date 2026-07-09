@@ -45,15 +45,20 @@
     "messenger": "Messenger",
     "whatsapp": "WhatsApp",
     "sendMessage": "Send a message",
-    "namePlaceholder": "Your Full Name",
+    "namePlaceholder": "Your Name or Company Name",
     "emailPlaceholder": "Your Email",
     "messagePlaceholder": "Your Message",
     "submit": "Send Message",
+    "sending": "Sending...",
     "nameRequired": "Please enter your name.",
     "emailRequired": "Please enter your email.",
     "emailInvalid": "Please enter a valid email address.",
     "messageRequired": "Please enter your message.",
-    "successToast": "Thank you, I will reply as soon as possible :)"
+    "successToast": "Thank you, I will reply as soon as possible :)",
+    "successTitle": "Message sent successfully",
+    "successMessage": "Thank you for reaching out. Your message is in my inbox, and I will reply to the email you provided as soon as possible.",
+    "successButton": "Send another message",
+    "submitError": "Your message could not be sent right now. Please try again in a moment or reach out directly by email."
   },
   "footer": {
     "home": "Home",
